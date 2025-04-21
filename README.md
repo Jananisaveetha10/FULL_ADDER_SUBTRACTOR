@@ -43,13 +43,59 @@ Borrow out = A'Bin + A'B + BBin
 Write the detailed procedure here
 
 **Program:**
+```
+//exp_4a
+module exp_4a(sum, cout, a, b, cin);
+    output sum;
+    output cout;
+    input a;
+    input b;
+    input cin;
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+	 wire w1,w2,w3;
+	 assign w1=a^b;
+	 assign w2=a&b;
+	 assign w3=w1&cin;
+	 assign sum=w1^cin;
+	 assign cout=w2|w3;
+endmodule
+```
+```
+exp_4b
+module exp_4b(df, bo, a, b, bin);
+    output df;
+    output bo;
+    input a;
+    input b;
+    input bin;
+	wire w1,w2,w3;
+	 assign w1=a^b;
+	 assign w2=(~a&b);
+	 assign w3=(~w1&bin);
+	 assign df=w1^bin;
+	 assign bo=w2|w3;
+
+endmodule
+```
+
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
+Developed by: JANANI S
+RegisterNumber:212224040127
 */
 
 **RTL Schematic**
 
 **Output Timing Waveform**
+![EX 04](https://github.com/user-attachments/assets/fd689c51-b11a-477c-9024-17f597398b7f)
+![EX 04 A](https://github.com/user-attachments/assets/7b7aa6d4-c0e1-42db-acd7-345741342cf7)
+![EX 04 DIGITAL](https://github.com/user-attachments/assets/0899200c-f03b-4120-b91f-582b28879258)
+![EX 4](https://github.com/user-attachments/assets/b1fca55e-b61e-4141-b2db-8c09ee91e7b5)
+
+
+
+
+
+
 
 **Result:**
 
